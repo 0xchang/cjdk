@@ -8,6 +8,8 @@ A bat script for easy switching between Java versions
 #### Windos
 ```
 git clone https://github.com/0xchang/cjdk.git
+rem add env
+cjdk 8
 ```
 *After downloading, open the bat file with notepad and insert
 Java_Root is set as the place where you install various versions
