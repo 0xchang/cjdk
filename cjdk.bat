@@ -2,7 +2,7 @@
 
 
 set Java_Root=D:\User\23102\
-set Config_Path=%~sdp0config.txt
+set Config_Path=%~sdp0cjdk.config.txt
 
 if not defined Chang_Java_Log (
 echo Not set Chang_Java_Log,setting...
@@ -27,8 +27,12 @@ if defined Path_Str (
 
 
 rem set env
+if "%*"=="" (
 set input=
 set /p input=input jdk version number:
+) else (
+set input=%1
+)
 set Change_Java_Path=%Java_Root%Java%input%\bin
 set Path=%Change_Java_Path%;%Path%
 
